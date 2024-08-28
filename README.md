@@ -2,7 +2,7 @@
 ```Group name``` PerezLab_Gators
 
 ## Overview
-We document our roadmap of applying mainly AIxMELD protocols with careful analysis for submitting structure predictions in CASP16. We record the progress for each target in the [project page](https://github.com/orgs/PDNALab/projects/2) and organize scripts, analysis, results and all other relevant information here to make the structure prediction submission trackable and reproducible.
+Here we document how we used RFDiffusion, ProteinMPNN, AF2, and AF-CBA to generate de novo binders for the extracellular domain of CD20.
 
 ## Timeline
 
