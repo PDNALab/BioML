@@ -8,11 +8,11 @@ Here we document how we used RFDiffusion, ProteinMPNN, AF2, and AF-CBA to genera
 
 ```AF-CBA``` AlpaFold2 (AF) Competitive Binding Assay
 
-```RT``` Rituximab
+```RT``` Rituximab (6VJA)
 
-```OF``` Ofatumumab 
+```OF``` Ofatumumab (6Y92)
 
-```OB``` Obinutuzumab
+```OB``` Obinutuzumab (6Y97)
 
 ```DN``` De Novo
 
