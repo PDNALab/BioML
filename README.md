@@ -4,7 +4,7 @@
 ## Overview
 Here we document how we used RFDiffusion, ProteinMPNN, AF2, and AF-CBA to generate de novo binders for the extracellular domain of CD20.
 
-# Terminologies
+### Terminologies
 
 ## Timeline
 
