@@ -2,7 +2,7 @@
 #SBATCH --job-name=MPNN
 #SBATCH --output=MPNN_s.out
 #SBATCH --error=MPNN_s.err
-#SBATCH --mail-type=ALL
+##SBATCH --mail-type=ALL
 ##SBATCH --mail-user=g.jokent@gmail.com
 #SBATCH --time=200:00:00
 #SBATCH --ntasks=1

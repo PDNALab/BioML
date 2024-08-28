@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=new_rf_motif
+#SBATCH --job-name=rf_motif
 #SBATCH --output=out.out
 #SBATCH --error=err.err
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=g.jokent@gmail.com
+##SBATCH --mail-type=ALL
+##SBATCH --mail-user=g.jokent@gmail.com
 #SBATCH --time=100:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
@@ -25,6 +25,6 @@ rf_diff="/orange/alberto.perezant/jokent.gaza/rfdiffusion/RFdiffusion"
 python $rf_diff/scripts/run_inference.py \
     inference.output_prefix=motifs/motif \
     inference.input_pdb=NEW_motif.pdb \
-    'contigmap.contigs=[A1-68/0 0-50/B69-77/0-50 ]' \
-    contigmap.length=80-80 inference.num_designs=3000 \
+    'contigmap.contigs=[A1-165/0 B166-330/0 0-50/C386-391/0-50 ]' \
+    contigmap.length=80-80 inference.num_designs=100 \
     inference.ckpt_override_path=$rf_diff/models/Complex_beta_ckpt.pt
