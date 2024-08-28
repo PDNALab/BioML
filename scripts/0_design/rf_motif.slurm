@@ -26,5 +26,5 @@ python $rf_diff/scripts/run_inference.py \
     inference.output_prefix=motifs/motif \
     inference.input_pdb=../input_pdbs/NEW_motif.pdb \
     'contigmap.contigs=[A1-68/0 0-50/B69-77/0-50 ]' \
-    contigmap.length=70-120 inference.num_designs=3000 \
+    contigmap.length=80-80 inference.num_designs=3000 \
     inference.ckpt_override_path=$rf_diff/models/Complex_beta_ckpt.pt
