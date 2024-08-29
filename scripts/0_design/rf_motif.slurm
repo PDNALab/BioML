@@ -4,7 +4,7 @@
 #SBATCH --error=err.err
 ##SBATCH --mail-type=ALL
 ##SBATCH --mail-user=g.jokent@gmail.com
-#SBATCH --time=100:00:00
+#SBATCH --time=300:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --ntasks-per-node=1

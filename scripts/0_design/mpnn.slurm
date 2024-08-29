@@ -4,7 +4,7 @@
 #SBATCH --error=MPNN_s.err
 ##SBATCH --mail-type=ALL
 ##SBATCH --mail-user=g.jokent@gmail.com
-#SBATCH --time=200:00:00
+#SBATCH --time=300:00:00
 #SBATCH --ntasks=1
 #SBATCH --distribution=cyclic:cyclic
 #SBATCH --mem-per-cpu=50000
