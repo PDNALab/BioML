@@ -31,6 +31,27 @@ sed -i "s|391|$C_cter|g" rf_motif.slurm
 model_name="Complex_$model"_"ckpt"
 sed -i "s|Complex_beta_ckpt|$model_name|g" rf_motif.slurm
 
+if [ "$motif" == "OF" ]; then
+  hotspot1=106; hotspot2=127
+elif [ "$motif" == "OB" ]; then
+  hotspot1=121; hotspot2=136
+else
+  # RT numbering scheme  
+  hotspot1=122; hotspot2=137
+fi
+
+hotspot_resides=""
+
+for ((i=hotspot1; i<=hotspot2; i++)); do
+  if [ $i -eq $((hotspot2)) ]; then
+    hotspot_residues+="A$i"  
+  else
+    hotspot_residues+="A$i,"  
+  fi
+done
+
+sed -i "s|hotspot-residues|$hotspot_residues|g" rf_motif.slurm
+
 # Run
 job_id=$(sbatch rf_motif.slurm | awk '{print $NF}')
 sbatch --dependency=afterok:$job_id mpnn.slurm
