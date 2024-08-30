@@ -32,7 +32,7 @@ model_name="Complex_$model"_"ckpt"
 sed -i "s|Complex_beta_ckpt|$model_name|g" rf_motif.slurm
 
 # Run
-#job_id=$(sbatch rf_motif.slurm | awk '{print $NF}')
-#sbatch --dependency=afterok:$job_id mpnn.slurm
+job_id=$(sbatch rf_motif.slurm | awk '{print $NF}')
+sbatch --dependency=afterok:$job_id mpnn.slurm
 
 cd $scripts_dir
