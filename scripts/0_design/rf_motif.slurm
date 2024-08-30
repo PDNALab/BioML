@@ -26,5 +26,6 @@ python $rf_diff/scripts/run_inference.py \
     inference.output_prefix=motifs/motif \
     inference.input_pdb=NEW_motif.pdb \
     'contigmap.contigs=[A1-165/0 B166-330/0 0-50/C386-391/0-50 ]' \
+    'ppi.hotspot_res=[A122,A123,A124,A125,A126,A127,A128,A129,A130,A131,A132,A133,A134,A135,A136,A137]' \
     contigmap.length=80-80 inference.num_designs=3000 \
     inference.ckpt_override_path=$rf_diff/models/Complex_beta_ckpt.pt

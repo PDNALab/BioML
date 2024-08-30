@@ -1,6 +1,7 @@
 #!/bin/bash
 
 motif=$1
+model=$2
 scripts_dir=$(pwd)
 
 # Prepare Files
@@ -27,8 +28,11 @@ C_cter=$(awk 'substr($0, 22, 1) == "C"' $input_pdbs | awk '{print $6}' | sort | 
 sed -i "s|386|$C_nter|g" rf_motif.slurm
 sed -i "s|391|$C_cter|g" rf_motif.slurm
 
+model_name="Complex_$model"_"ckpt"
+sed -i "s|Complex_beta_ckpt|$model_name|g" rf_motif.slurm
+
 # Run
-job_id=$(sbatch rf_motif.slurm | awk '{print $NF}')
-sbatch --dependency=afterok:$job_id mpnn.slurm
+#job_id=$(sbatch rf_motif.slurm | awk '{print $NF}')
+#sbatch --dependency=afterok:$job_id mpnn.slurm
 
 cd $scripts_dir
