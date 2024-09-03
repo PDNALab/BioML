@@ -53,7 +53,7 @@ done
 sed -i "s|hotspot-residues|$hotspot_residues|g" rf_motif.slurm
 
 # Run
-job_id=$(sbatch rf_motif.slurm | awk '{print $NF}')
-sbatch --dependency=afterok:$job_id mpnn.slurm
+#job_id=$(sbatch rf_motif.slurm | awk '{print $NF}')
+#sbatch --dependency=afterok:$job_id mpnn.slurm
 
 cd $scripts_dir

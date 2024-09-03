@@ -20,6 +20,7 @@ module purge
 
 module load cuda/11.1.0
 export PATH="/orange/alberto.perezant/jokent.gaza/dl_binder_design/include/envs/dl_binder_design/bin/:$PATH"
+export PATH=$PATH:/orange/alberto.perezant/jokent.gaza/dl_binder_design/include/silent_tools
 export LD_LIBRARY_PATH="/orange/alberto.perezant/jokent.gaza/dl_binder_design/include/envs/dl_binder_design/bin/:$LD_LIBRARY_PATH"
 
 dl_binder="/orange/alberto.perezant/jokent.gaza/dl_binder_design"
