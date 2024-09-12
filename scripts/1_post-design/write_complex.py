@@ -27,13 +27,13 @@ with open('../motifs_label.dat', 'r') as f:
 for i, (j, k) in enumerate(zip(name_all, label_all), 1):
   os.system("mkdir {0}-{1}".format(i,k))
 
-  head = "#165,80 2,1\n>101\t102\n{0}{1}\n".format(CD20,str(j))
+  head = "#165,80\t2,1\n>101\t102\n{0}{1}\n".format(CD20,str(j))
   tail = ">102\n---------------------------------------------------------------------------------------------------------------------------------------------------------------------{0}".format(str(j))
 
   with open("CD20.msa", "r") as f:
       msa = f.read()
 
   with open("{0}-{1}/seq_custom.a3m".format(i,k), "w") as f:
-      f.write(head+msa+tail)
+      f.write(head+msa+tail+"\n"+tail)
 
   f.close()
