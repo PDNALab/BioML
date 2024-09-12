@@ -11,7 +11,7 @@ mkdir sanity; mkdir sanity/monomer; mkdir sanity/complex;
 
 # Get list of successful designs (pAE < 10)
 awk '
-$5 > 95 {
+$5 > 85 {
     match($9, /motif_[0-9]+_/)
     if (RSTART > 0) {
         print $5 "\t" substr($9, RSTART, RLENGTH)
